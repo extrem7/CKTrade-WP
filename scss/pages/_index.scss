@@ -1,0 +1,221 @@
+main {
+  padding: 55px 0;
+  background: url("../images/main-background.png") no-repeat center;
+  .content {
+    .title {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0 0 30px;
+    }
+    p {
+      color: #333;
+    }
+  }
+  .sidebar {
+    background-color: #f2eeeb;
+    padding: 25px;
+    .title {
+      font-size: 24px;
+      font-weight: 500;
+      border-bottom: 2px solid black;
+      padding-bottom: 8px;
+
+    }
+    article {
+      padding: 15px 0 10px;
+      border-bottom: 1px dashed rgba(#666, 0.5);
+      display: flex;
+      align-items: flex-start;
+      .pic {
+        border: 1px solid #515151;
+        min-width: 80px;
+        @include size(80px, 90px);
+        margin: 5px 20px 0 0;
+      }
+      .date {
+        font-size: 12px;
+        font-weight: 700;
+        color: rgba(black, .4);
+      }
+      .text {
+        font-size: 14px;
+        color: $gray;
+        line-height: 16px;
+        margin: 0;
+      }
+      a {
+        color: $red;
+        font-size: 14px;
+        text-decoration: underline;
+        margin-top: 7px;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.tools {
+  padding: 40px 0;
+  background: url("../images/tools-background.png") no-repeat center;
+  background-size: cover;
+  .container {
+    padding: 0;
+    .row > div {
+      margin-bottom: 30px;
+    }
+  }
+  .item {
+    height: 100%;
+    padding: 15px;
+    background-color: #f2eeeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    img {
+      margin: 0 auto 10px;
+      display: block;
+      max-width: 100%;
+    }
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      color: #8b8987;
+      b {
+        font-weight: 900;
+      }
+    }
+  }
+  .title {
+    @include fit-content;
+    max-width: 100%;
+    margin: 15px auto 0;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 300;
+    position: relative;
+    text-align: center;
+    line-height: 48px;
+    b {
+      color: #bd5f17;
+      font-weight: 900;
+    }
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      background: url("../images/tools-title-left.png");
+      @include size(170px, 50px);
+      top: 25px;
+      left: -80px;
+    }
+    &:after {
+      left: auto;
+      right: -80px;
+      background: url("../images/tools-title-right.png");
+    }
+  }
+}
+
+.advantages {
+  padding: 50px 0;
+  background: url("../images/advantages-background.png") no-repeat center;
+  background-size: cover;
+  .title {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+    b {
+      font-weight: 700;
+    }
+  }
+  .item {
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .icon {
+      @include size(170px);
+      background: url("../images/advantages-item.png");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    p {
+      font-size: 24px;
+      font-weight: 300;
+      margin-top: 25px;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+  .button{
+    padding: 7px 35px;
+    margin: 0 auto;
+  }
+}
+
+@media ($md) {
+  main {
+    .content {
+      p {
+        font-size: 15px;
+      }
+    }
+    .sidebar {
+      padding: 20px 10px;
+      article {
+        .text {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .tools {
+    .title {
+      font-size: 33px;
+    }
+  }
+  .advantages{
+    .item{
+      p{
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+@media ($sm) {
+  main {
+    background: white;
+    .content {
+      padding-bottom: 25px;
+      .title {
+        font-size: 28px;
+      }
+    }
+    padding: 25px 0 0;
+  }
+  .tools {
+    .row {
+      margin: 0;
+      & > div {
+        max-width: 270px;
+      }
+    }
+    .title {
+      font-size: 29px;
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+  .advantages{
+    .button{
+      max-width: 320px;
+      white-space: normal;
+    }
+  }
+}

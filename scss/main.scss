@@ -1,0 +1,12 @@
+@import "../scss/vendors/bootstrap.min.scss";
+@import "helpers/reset";
+@import "helpers/fonts";
+@import "helpers/utils";
+@import "helpers/base";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/modal";
+
+.home-page {
+  @import "pages/index.scss";
+}
